@@ -1,42 +1,69 @@
 import * as React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { useState } from "react"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  NavbarText,
+} from "reactstrap"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const ListLink = props => (
+  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
+    <Link to={props.to}>{props.children}</Link>
+  </li>
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+const Header = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `
+  )
+  const [isOpen, setIsOpen] = useState(false)
+  const toggle = () => setIsOpen(!isOpen)
+  return (
+    <div>
+      <Navbar fixed="top" color="light" light expand="sm">
+        <div className="container">
+          <NavbarBrand>
+            <ListLink to="/">{data.site.siteMetadata.title}</ListLink>
+          </NavbarBrand>
+          <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="mr-auto" navbar>
+              <NavItem>
+                <NavLink>
+                  <ListLink to="/team">Teams</ListLink>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink>
+                  <ListLink to="/tags">Tags</ListLink>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink>
+                  <ListLink to="/about">About</ListLink>
+                </NavLink>
+              </NavItem>
+            </Nav>
+            <NavbarText>Simple Text</NavbarText>
+          </Collapse>
+        </div>
+      </Navbar>
+    </div>
+  )
 }
 
 export default Header
