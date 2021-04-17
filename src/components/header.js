@@ -9,7 +9,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  NavbarText,
 } from "reactstrap"
 
 const ListLink = props => (
@@ -58,7 +57,6 @@ const Header = () => {
                 </NavLink>
               </NavItem>
             </Nav>
-            <NavbarText>Simple Text</NavbarText>
           </Collapse>
         </div>
       </Navbar>
