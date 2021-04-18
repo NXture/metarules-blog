@@ -4,13 +4,21 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Post from "../components/post"
 import PaginationLinks from "../components/paginationLinks"
+import "../styles/layout.css"
 
 const IndexPage = () => {
   const postsPerPage = 2
   let numberOfPages
   return (
-    <Layout>
+    <div>
+      <Layout>
       <Seo title="Home" />
+      <div className="blog-intro-container">
+        <div className="blog-intro">
+          <h2>Welcome to <span>metarules - blog</span>.</h2>
+          <p>We are on a mission to share & make programming, data skills & other interesting resources accessible for learners & beginners everywhere.</p>
+        </div>
+      </div>
       <StaticQuery
         query={indexQuery}
         render={data => {
@@ -37,6 +45,8 @@ const IndexPage = () => {
         }}
       />
     </Layout>
+    </div>
+    
   )
 }
 

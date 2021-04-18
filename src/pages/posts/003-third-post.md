@@ -5,7 +5,7 @@ author: "Varun SriVathsa"
 image: "../../images/geom-5.png"
 tags:
   - mathematics
-  - stats
+  - statistics
 ---
 
 this is to learn cssthis is to learn cssthis is to learn cssthis is to learn cssthis is to learn cssthis is to learn cssthis is to learn cssthis is to learn cssthis is to learn cssthis is to learn cssthis is to learn cssthis is to learn css

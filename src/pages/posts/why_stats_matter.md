@@ -4,8 +4,8 @@ date: 2021-04-18
 author: "Varun SriVathsa"
 image: "../../images/why_stats_matter.png"
 tags:
-  - Mathematics
-  - Statistics
+  - mathematics
+  - statistics
 ---
 
 _Everyone wants answers_ and in the modern world, often the most import answers come in the form of numbers.
