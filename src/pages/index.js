@@ -9,7 +9,7 @@ const IndexPage = () => {
   const postsPerPage = 2
   let numberOfPages
   return (
-    <Layout pageTitle="Welcome to our blog">
+    <Layout>
       <Seo title="Home" />
       <StaticQuery
         query={indexQuery}
