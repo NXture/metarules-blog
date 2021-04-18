@@ -1,15 +1,7 @@
 import * as React from "react"
-import { useState } from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-} from "reactstrap"
+import { Navbar, Nav } from "react-bootstrap"
+import "../styles/header.css"
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
@@ -29,37 +21,45 @@ const Header = () => {
       }
     `
   )
-  const [isOpen, setIsOpen] = useState(false)
-  const toggle = () => setIsOpen(!isOpen)
+
   return (
-    <div>
-      <Navbar fixed="top" color="light" light expand="sm">
-        <div className="container">
-          <NavbarBrand>
-            <ListLink to="/">{data.site.siteMetadata.title}</ListLink>
-          </NavbarBrand>
-          <NavbarToggler onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar>
-            <Nav className="mr-auto" navbar>
-              <NavItem>
-                <NavLink>
-                  <ListLink to="/team">Teams</ListLink>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink>
-                  <ListLink to="/tags">Tags</ListLink>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink>
-                  <ListLink to="/about">About</ListLink>
-                </NavLink>
-              </NavItem>
+    <div className="navbar-container">
+      <div className="top-info" style={{ maxWidth: 700 }}>
+        <h6
+          style={{
+            marginTop: `0.2rem`,
+            marginBottom: `0.4rem`,
+            color: `white`,
+            textShadow: `0.5px 0.5px 10px black`,
+            fontSize: `small`,
+            fontWeight: `lighter`,
+          }}
+        >
+          Free Online Resources for Beginners and students to learn, understand
+          & develop!
+        </h6>
+      </div>
+      <div style={{ margin: `auto`, maxWidth: 900, padding: `0 1rem` }}>
+        <Navbar sticky="top" id="cstm-navbar" expand="sm">
+          <Navbar.Brand className="brand-name">
+            <Link to="/">{data.site.siteMetadata.title}</Link>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto nav-link">
+              <Nav.Item>
+                <ListLink to="/team">Teams</ListLink>
+              </Nav.Item>
+              <Nav.Item>
+                <ListLink to="/tags">Tags</ListLink>
+              </Nav.Item>
+              <Nav.Item>
+                <ListLink to="/about">About</ListLink>
+              </Nav.Item>
             </Nav>
-          </Collapse>
-        </div>
-      </Navbar>
+          </Navbar.Collapse>
+        </Navbar>
+      </div>
     </div>
   )
 }

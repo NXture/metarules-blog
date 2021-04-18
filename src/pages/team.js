@@ -1,6 +1,6 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import "../styles/index.scss"
 import authors from "../utils/authors"
 import { Card, CardText, CardBody, CardTitle, Button, Row } from "reactstrap"
@@ -9,7 +9,7 @@ import { slugify } from "../utils/utilityFunctions"
 
 const TeamPage = () => (
   <Layout pageTitle="Our Team">
-    <SEO title="Team" keywords={[`gatsby`, `application`, `react`]} />
+    <Seo title="Team" keywords={[`gatsby`, `application`, `react`]} />
     <Row className="md-4">
       <div className="col-md-3">
         <img

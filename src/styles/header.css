@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+/*header style*/
+.top-info {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+  border-radius: 0px 0px 10px 10px;
+}
+
+.navbar-container {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.nav-link li {
+  justify-content: center;
+  font-family: "Ubuntu", sans-serif;
+  padding: 2px;
+}
+
+.brand-name {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+}
+
+#cstm-navbar {
+  border-bottom: none;
+}

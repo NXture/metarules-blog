@@ -1,7 +1,7 @@
 import { graphql, StaticQuery } from "gatsby"
 import * as React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Post from "../components/post"
 import PaginationLinks from "../components/paginationLinks"
 
@@ -10,7 +10,7 @@ const IndexPage = () => {
   let numberOfPages
   return (
     <Layout pageTitle="Welcome to our blog">
-      <SEO title="Home" />
+      <Seo title="Home" />
       <StaticQuery
         query={indexQuery}
         render={data => {

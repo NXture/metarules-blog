@@ -17,11 +17,9 @@ But let me ask a more probing question, one that’s sometimes a little harder t
 
 I didn’t think that was a problem. I thought it was just how things are. Software developers don’t really know what we’re doing. We’re all just sort of making it up. But I’ve come to believe that that is a signal of one of these deeper, more universal problems. That we write code so much and it’s sort of a, maybe you’ve done this before because I’ve done it I can’t even count how many times, I can’t get this piece of code to work and so I’m like, all right, wrap some parentheses around it and put a plus one on it and wrap a try-catch around it. And at some point, it just accidentally works. The test case passes. And then you’re like, let me back up and just hopefully this doesn’t break, right?
 
-You put a little to do comment, like a little code comment there, like nobody touch this. This is house of cards design right? I can barely get this thing to balance, please nobody breathe on it. Don’t know why it works, don’t know why it balances but let’s just ship it that way.
+You put a little code comment there, like nobody touch this. This is house of cards design right? I can barely get this thing to balance, please nobody breathe on it. Don’t know why it works, don’t know why it balances but let’s just ship it that way.
 
 And while that can feel gratifying to ship a piece of code, in the back of my mind it always bugged me. Maybe you’re that way. Maybe you’ve been bugged by, why do I ship all this code and I’m not really certain why it’s working? And I wonder If that problem of not understanding our code is one of these universal issues, and I wonder if it actually is systemic that it leads to a lot of our other problems.
-
-That the more problems that, that it causes more of those kinds of problems, like for example, trying to debug things. That if we’re trying to debug something that was working, but we didn’t know why it was working in the first place, isn’t it much harder to understand how to fix it?
 
 As a matter of fact, I would say it this way. If you don’t know why your code works, you have no hope of fixing it when it breaks, other than sheer luck and guessing and magic.
 
