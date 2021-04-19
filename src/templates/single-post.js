@@ -39,6 +39,7 @@ const BlogPost = ({ data, pageContext }) => {
             <span className="text-info">{post.date}</span> by{" "}
             <span className="text-info">{post.author}</span>
           </CardSubtitle>
+          <span style={{ fontStyle: "italic"}}>Tags: {" "}</span>
           <ul className="post-tags">
             {data.markdownRemark.frontmatter.tags.map(tag => (
               <li key={tag}>

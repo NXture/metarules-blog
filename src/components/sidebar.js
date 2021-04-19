@@ -16,10 +16,14 @@ import "../styles/latest-post.css"
 
 const Sidebar = ({ author, authorFluid }) => {
   return (
-    <div>
+    <div style={{ position: "sticky", top: 10 }}>
       {author && (
         <Card>
-          <GatsbyImage className="card-image-top" image={authorFluid} alt="author" />
+          <GatsbyImage
+            className="card-image-top"
+            image={authorFluid}
+            alt="author"
+          />
           <CardBody>
             <CardTitle className="text-center text-uppercase mb-3">
               {author.name}
@@ -51,7 +55,7 @@ const Sidebar = ({ author, authorFluid }) => {
               <div>
                 {data.allMarkdownRemark.edges.map(({ node }) => (
                   <div key={node.id}>
-                    <hr style={{marginTop: 0}}/>
+                    <hr style={{ marginTop: 0 }} />
                     <Row>
                       <Col xs="8">
                         <div className="recent-post">
@@ -66,9 +70,10 @@ const Sidebar = ({ author, authorFluid }) => {
                           </p>
                         </div>
                       </Col>
-                      <Col xs="4" >
-                        <Link to={node.fields.slug} >
-                          <GatsbyImage className="recent-post-img"
+                      <Col xs="4">
+                        <Link to={node.fields.slug}>
+                          <GatsbyImage
+                            className="recent-post-img"
                             image={
                               node.frontmatter.image.childImageSharp
                                 .gatsbyImageData

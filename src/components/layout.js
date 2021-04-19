@@ -5,6 +5,7 @@ import { Row, Col } from "reactstrap"
 import Sidebar from "./sidebar"
 import Header from "./header"
 import "../styles/index.scss"
+import "../styles/layout.css"
 
 const Layout = ({ authorImage, children, pageTitle, postAuthor }) => {
   const data = useStaticQuery(graphql`
@@ -28,16 +29,20 @@ const Layout = ({ authorImage, children, pageTitle, postAuthor }) => {
             <Sidebar author={postAuthor} authorFluid={authorImage} />
           </Col>
         </Row>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built by
-          {` `}
-          <a href="/">nxture</a>
-        </footer>
       </div>
+      <footer
+        className="cstm-footer"
+        style={{
+          marginTop: `2rem`,
+          backgroundColor: "white",
+          paddingLeft: `1%`,
+        }}
+      >
+        metarules © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://reactjs.org/">ReactJS</a> <span>/</span>{" "}
+        <a href="/privacy-policy">Our Privacy Policy</a>
+      </footer>
     </>
   )
 }
@@ -46,4 +51,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout;
+export default Layout
