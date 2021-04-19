@@ -8,8 +8,11 @@ import {
   Form,
   FormGroup,
   Input,
+  Row,
+  Col,
 } from "reactstrap"
 import { GatsbyImage } from "gatsby-plugin-image"
+import "../styles/latest-post.css"
 
 const Sidebar = ({ author, authorFluid }) => {
   return (
@@ -66,24 +69,35 @@ const Sidebar = ({ author, authorFluid }) => {
             render={data => (
               <div>
                 {data.allMarkdownRemark.edges.map(({ node }) => (
-                  <Card key={node.id}>
-                    <Link to={node.fields.slug}>
-                      <GatsbyImage
-                        className="card-image-top"
-                        image={
-                          node.frontmatter.image.childImageSharp.gatsbyImageData
-                        }
-                        alt="recent post thumtail"
-                      />
-                    </Link>
-                    <CardBody>
-                      <CardTitle>
-                        <Link to={node.fields.slug}>
-                          {node.frontmatter.title}
+                  <div key={node.id}>
+                    <hr style={{marginTop: 0}}/>
+                    <Row>
+                      <Col xs="8">
+                        <div className="recent-post">
+                          <h6>
+                            <Link to={node.fields.slug}>
+                              {node.frontmatter.title}
+                            </Link>
+                          </h6>
+                          <p className="recent-post-info">
+                            <span>{node.frontmatter.author}</span> on{" "}
+                            <span>{node.frontmatter.date}</span>
+                          </p>
+                        </div>
+                      </Col>
+                      <Col xs="4" >
+                        <Link to={node.fields.slug} >
+                          <GatsbyImage className="recent-post-img"
+                            image={
+                              node.frontmatter.image.childImageSharp
+                                .gatsbyImageData
+                            }
+                            alt="recent post thumtail"
+                          />
                         </Link>
-                      </CardTitle>
-                    </CardBody>
-                  </Card>
+                      </Col>
+                    </Row>
+                  </div>
                 ))}
               </div>
             )}
@@ -105,6 +119,8 @@ const sidebarQuery = graphql`
           id
           frontmatter {
             title
+            author
+            date(formatString: "MMM Do YYYY")
             image {
               childImageSharp {
                 gatsbyImageData(layout: CONSTRAINED)
