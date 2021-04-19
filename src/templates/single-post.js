@@ -7,14 +7,20 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { slugify } from "../utils/utilityFunctions"
 import authors from "../utils/authors"
 //import kebabCase from "lodash/kebabCase"
-//import { Disqus } from "gatsby-plugin-disqus"
+import { Disqus } from "gatsby-plugin-disqus"
 
 const BlogPost = ({ data, pageContext }) => {
   const post = data.markdownRemark.frontmatter
   const author = authors.find(x => x.name === post.author)
 
-  const baseUrl = "https://gatsby.co.uk/"
+  const baseUrl = "https://metarules.tech"
+  const siteUrl = "https://metarules.tech"
 
+  const DisqusConfig = {
+    url: siteUrl + pageContext.slug,
+    identifier: data.markdownRemark.id,
+    title: post.title,
+  }
   return (
     <Layout
       pageTitle={post.title}
@@ -26,14 +32,13 @@ const BlogPost = ({ data, pageContext }) => {
         <GatsbyImage
           className="card-image-top"
           image={post.image.childImageSharp.gatsbyImageData}
-          alt="blog post image"
+          alt="Posts"
         />
         <CardBody>
           <CardSubtitle>
             <span className="text-info">{post.date}</span> by{" "}
             <span className="text-info">{post.author}</span>
           </CardSubtitle>
-          <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           <ul className="post-tags">
             {data.markdownRemark.frontmatter.tags.map(tag => (
               <li key={tag}>
@@ -45,6 +50,7 @@ const BlogPost = ({ data, pageContext }) => {
               </li>
             ))}
           </ul>
+          <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
         </CardBody>
       </Card>
       <h3 className="text-center">Share this post</h3>
@@ -59,37 +65,72 @@ const BlogPost = ({ data, pageContext }) => {
               }
               className="facebook"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
-                src="https://img.icons8.com/doodle/48/000000/facebook-new.png"
-                alt="facebook icon"
+                src="https://img.icons8.com/fluent/48/000000/facebook-new.png"
+                alt="facebook"
+              />{" "}
+            </a>
+          </li>
+          <li>
+            <a
+              href={
+                "https://twitter.com/share?url=" +
+                baseUrl +
+                pageContext.slug +
+                "&text=" +
+                post.title +
+                "&via" +
+                "twitterHandle"
+              }
+              className="twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://img.icons8.com/color/48/000000/twitter-circled--v1.png"
+                alt="twitter"
               />
             </a>
           </li>
           <li>
             <a
               href={
-                "https://www.twitter.com/share?url=" +
+                "https://plus.google.com/share?url=" +
                 baseUrl +
-                pageContext.slug +
-                "&text=" +
-                post.title +
-                "&via" +
-                "twitterhanddle"
+                pageContext.slug
               }
-              className="twitter"
+              className="google"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
-                src="https://img.icons8.com/doodle/48/000000/twitter--v1.png"
-                alt="twitter icon"
+                src="https://img.icons8.com/fluent/48/000000/google-plus.png"
+                alt="google plus"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href={
+                "https://www.linkedin.com/shareArticle?url=" +
+                baseUrl +
+                pageContext.slug
+              }
+              className="linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://img.icons8.com/color/48/000000/linkedin.png"
+                alt="Linkedin"
               />
             </a>
           </li>
         </ul>
       </div>
+      <Disqus config={DisqusConfig} />
     </Layout>
   )
 }
