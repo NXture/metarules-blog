@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 
 .blog-intro,
-.tags {
+.tags,
+.teams {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +20,8 @@
 }
 
 .blog-intro-container,
-.tags-container {
+.tags-container,
+.teams-container {
   padding: 0rem 0rem 2rem 0rem;
 }
 
