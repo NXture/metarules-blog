@@ -56,6 +56,9 @@ const Header = () => {
               <Nav.Item>
                 <ListLink to="/about">About</ListLink>
               </Nav.Item>
+              <Nav.Item>
+                <ListLink to="/submit-a-blog" >Submit</ListLink>
+              </Nav.Item>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

@@ -19,6 +19,11 @@
   color: rgb(52, 80, 173);
 }
 
+.blog-intro h2,
+h3 {
+  text-align: center;
+}
+
 .blog-intro-container,
 .tags-container,
 .teams-container {
