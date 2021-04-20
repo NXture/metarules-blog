@@ -13,8 +13,8 @@ const IndexPage = () => {
     <div>
       <Layout>
       <Seo title="Home" />
-      <div className="blog-intro-container">
-        <div className="blog-intro">
+      <div className="main-container">
+        <div className="main-content">
           <h2>Welcome to <span>metarules - blog</span>.</h2>
           <p>We are on a mission to share & make programming, data skills & other interesting resources accessible for learners & beginners everywhere.</p>
         </div>

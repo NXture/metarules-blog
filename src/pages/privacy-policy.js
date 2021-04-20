@@ -6,8 +6,8 @@ import "../styles/index.scss"
 const PrivacyPolicy = () => (
   <Layout>
     <Seo title="Privacy Policy" />
-    <div className="blog-intro-container">
-      <div className="blog-intro">
+    <div className="main-container">
+      <div className="main-content">
         <h2>
           Privacy Policy of <span>metarules</span>.
         </h2>

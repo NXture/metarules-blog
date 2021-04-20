@@ -6,15 +6,16 @@ import "../styles/index.scss"
 const SubmitBlog = () => (
   <Layout>
     <Seo title="Submit a Blog" />
-    <div className="blog-intro-container">
-      <div className="blog-intro">
+    <div className="main-container">
+      <div className="main-content submit-blog">
         <h2>
           Submit a blog to <span>metarules</span>.
+          <span role="img" aria-labelledby="writting emoji">
+            ✍
+          </span>
         </h2>
-        <h3>
-          Submissions Guidelines
-        </h3>
-        <hr style={{minWidth: `80%`}}/>
+        <h3>Submissions Guidelines</h3>
+        <hr style={{ minWidth: `80%` }} />
         <h3>Guest Blogs</h3>
         <p>
           We write about AI, Big Data, Data Science, and Machine Learning,
@@ -46,8 +47,8 @@ const SubmitBlog = () => (
         </p>
         <p>
           Please email relevant submissions - to{" "}
-          <a href="/submit-a-blog">metarules@gmail.com</a> and follow
-          submission guidelines below.
+          <a href="/submit-a-blog">metarules@gmail.com</a> and follow submission
+          guidelines below.
         </p>
         <h3>Submission guidelines</h3>
         <ol>
@@ -91,7 +92,7 @@ const SubmitBlog = () => (
           code hosting, and include the gist URL in your submission where
           appropriate, and we can embed the code in your post.
         </p>
-        <hr style={{minWidth: `80%`}}/>
+        <hr style={{ minWidth: `80%` }} />
         <p>
           <span>metarules-blog</span> reserves the right to edit all submissions
           for length and to correct errors/typos.

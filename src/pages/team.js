@@ -10,15 +10,26 @@ import { slugify } from "../utils/utilityFunctions"
 const TeamPage = () => (
   <Layout>
     <Seo title="Team" keywords={[`gatsby`, `application`, `react`]} />
-    <div className="teams-container">
-      <div className="teams">
+    <div className="main-container">
+      <div className="main-content">
         <h2>Meet the Team.</h2>
         <p>
           The only way to create great things every day is with great people who
           truly enjoy their work, below are the authors and editors who are
           responsible of the success of this site.
         </p>
-        <h3>Our folk.</h3>
+        <h3>
+          Join Us{" "}
+          <span role="img" aria-labelledby="teams Emoji">
+            🤝
+          </span>
+        </h3>
+        <p>
+          Anyone can write on metarules. Students, Thought-leaders, journalists,
+          experts, and individuals with unique perspectives can share their
+          thinking here. Be a part of metarules-blog by submitting a blog. <a href="/submit-a-blog">Submissions Guildelines</a>
+        </p>
+        <h3>Our folk</h3>
         <Row className="md-4">
           <div className="col-md-3">
             <img

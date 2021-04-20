@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 
-.blog-intro,
-.tags,
-.teams {
+.main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: white;
   padding: 3% 5% 3% 5%;
   border-radius: 10px;
@@ -13,20 +12,13 @@
   letter-spacing: 1px;
 }
 
-.blog-intro span {
+.main-content span {
   font-family: "Ubuntu", sans-serif;
   font-weight: bolder;
   color: rgb(52, 80, 173);
 }
 
-.blog-intro h2,
-h3 {
-  text-align: center;
-}
-
-.blog-intro-container,
-.tags-container,
-.teams-container {
+.main-container {
   padding: 0rem 0rem 2rem 0rem;
 }
 
@@ -39,4 +31,9 @@ h3 {
 .cstm-footer {
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.submit-blog h2,
+h3 {
+  text-align: center;
 }

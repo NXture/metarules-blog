@@ -6,8 +6,8 @@ import "../styles/index.scss"
 const AboutPage = () => (
   <Layout>
     <Seo title="About" />
-    <div className="blog-intro-container">
-      <div className="blog-intro">
+    <div className="main-container">
+      <div className="main-content">
         <h2>
           About <span>metarules</span>.
         </h2>

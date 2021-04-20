@@ -10,8 +10,8 @@ const tagsPage = ({ pageContext }) => {
   return (
     <Layout>
       <Seo title="All tags" keywords={["tags", "topics"]} />
-      <div className="tags-container">
-        <div className="tags">
+      <div className="main-container">
+        <div className="main-content">
           <h2>Tags - List</h2>
           <p>Below are the tags used in this blogging site.</p>
           <ul className="tags-section">
