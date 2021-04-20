@@ -13,8 +13,7 @@ const AboutPage = () => (
         </h2>
         <p>
           <span>metarules</span> is a blogging site on AI, Analytics, Big Data,
-          Data Science, Machine Learning and related topics developed and is
-          edited by <span>Varun SriVathsa </span>and team.
+          Data Science, Machine Learning and related topics.
         </p>
         <p>
           We are on a mission to share & make programming, data skills & other
