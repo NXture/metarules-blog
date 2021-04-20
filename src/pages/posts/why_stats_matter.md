@@ -2,7 +2,7 @@
 title: "Why Statistics Matter in your Life!"
 date: 2021-04-18
 author: "Varun SriVathsa"
-image: "../../images/why_stats_matter.png"
+image: "../../images/post-images/why_stats_matter.png"
 tags:
   - mathematics
   - statistics
