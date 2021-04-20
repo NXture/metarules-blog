@@ -9,7 +9,7 @@ tags:
   - computer-science
 ---
 
-Code is for Humans, not Computers.
+> Code is for Humans, not Computers.
 
 Let me start by asking this question. Have you ever had a piece of code, that it broke but you just had no idea why it broke? It seemed like it had been working before and now all of a sudden it’s been broken and you just can’t figure out why. And that is I guess about as universal as it gets for software developers, right? Is that we write this piece of code, and then it breaks and we’re just pulling our hair out, we can’t figure out why it’s broken.
 
