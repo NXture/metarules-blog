@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `metarules`,
-    description: `Blogging Site - We at nxture are on a mission to share and make data skills and other interesting resources accessible for learners and beginners everywhere.`,
+    description: `Free online resources on AI, Analytics, Big Data, Data Science, Machine Learning, Statistics and related topics.  We at metarules are on a mission to share and make data skills and other interesting resources accessible for learners and beginners everywhere.`,
     author: `Varun SriVathsa`,
   },
   plugins: [
