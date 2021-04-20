@@ -5,6 +5,15 @@ import Seo from "../components/seo"
 import Post from "../components/post"
 import PaginationLinks from "../components/paginationLinks"
 import "../styles/layout.css"
+import Helmet from "react-helmet"
+
+<Helmet>
+<html lang="en" />
+  <meta
+    name="google-site-verification"
+    content="google8173cd33bf2363cf.html"
+  />
+</Helmet>
 
 const IndexPage = () => {
   const postsPerPage = 2
