@@ -5,15 +5,6 @@ import Seo from "../components/seo"
 import Post from "../components/post"
 import PaginationLinks from "../components/paginationLinks"
 import "../styles/layout.css"
-import Helmet from "react-helmet"
-
-<Helmet>
-<html lang="en" />
-  <meta
-    name="google-site-verification"
-    content="google8173cd33bf2363cf.html"
-  />
-</Helmet>
 
 const IndexPage = () => {
   const postsPerPage = 2
@@ -21,41 +12,51 @@ const IndexPage = () => {
   return (
     <div>
       <Layout>
-      <Seo title="Home" />
-      <div className="main-container">
-        <div className="main-content">
-          <h2>Welcome to <span>metarules - blog</span>.</h2>
-          <p>We are on a mission to share & make programming, data skills & other interesting resources accessible for learners & beginners everywhere.</p>
+        <Seo title="Home" />
+        <div className="main-container">
+          <div className="main-content">
+            <h2>
+              Welcome to <span>metarules - blog</span>.
+            </h2>
+            <p>
+              We are on a mission to share & make programming, data skills &
+              other interesting resources accessible for learners & beginners
+              everywhere.
+            </p>
+          </div>
         </div>
-      </div>
-      <StaticQuery
-        query={indexQuery}
-        render={data => {
-          numberOfPages = Math.ceil(
-            data.allMarkdownRemark.totalCount / postsPerPage
-          )
-          return (
-            <div>
-              {data.allMarkdownRemark.edges.map(({ node }) => (
-                <Post
-                  key={node.id}
-                  title={node.frontmatter.title}
-                  author={node.frontmatter.author}
-                  slug={node.fields.slug}
-                  date={node.frontmatter.date}
-                  body={node.excerpt}
-                  fluid={node.frontmatter.image.childImageSharp.gatsbyImageData}
-                  tags={node.frontmatter.tags}
+        <StaticQuery
+          query={indexQuery}
+          render={data => {
+            numberOfPages = Math.ceil(
+              data.allMarkdownRemark.totalCount / postsPerPage
+            )
+            return (
+              <div>
+                {data.allMarkdownRemark.edges.map(({ node }) => (
+                  <Post
+                    key={node.id}
+                    title={node.frontmatter.title}
+                    author={node.frontmatter.author}
+                    slug={node.fields.slug}
+                    date={node.frontmatter.date}
+                    body={node.excerpt}
+                    fluid={
+                      node.frontmatter.image.childImageSharp.gatsbyImageData
+                    }
+                    tags={node.frontmatter.tags}
+                  />
+                ))}
+                <PaginationLinks
+                  currentPage={1}
+                  numberOfPages={numberOfPages}
                 />
-              ))}
-              <PaginationLinks currentPage={1} numberOfPages={numberOfPages} />
-            </div>
-          )
-        }}
-      />
-    </Layout>
+              </div>
+            )
+          }}
+        />
+      </Layout>
     </div>
-    
   )
 }
 
