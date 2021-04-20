@@ -11,6 +11,7 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <meta name="google-site-verification" content="YyI--r01fVr_cCksWox-t8W_pC3tvCF4mzXSTH4vCFI" />
         <script data-ad-client="ca-pub-7004283638114501" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         {props.headComponents}
       </head>
