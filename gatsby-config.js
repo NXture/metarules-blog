@@ -46,7 +46,6 @@ module.exports = {
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-transformer-remark`,
     `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-plugin-disqus`,
@@ -60,9 +59,22 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: "gatsby-remark-code-titles",
+            options: {
+              className: "gatsby-code-title",
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
+            },
+          },
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+              showLineNumbers: true,
+              noInlineHighlight: false,
             },
           },
         ],
