@@ -3,6 +3,7 @@ module.exports = {
     title: `metarules`,
     description: `Free online resources on AI, Analytics, Big Data, Data Science, Machine Learning, Statistics and related topics.  We at metarules are on a mission to share and make data skills and other interesting resources accessible for learners and beginners everywhere.`,
     author: `Varun SriVathsa`,
+    siteUrl: `https://www.metarules.tech`
   },
   plugins: [
     {
@@ -60,6 +61,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
