@@ -8,15 +8,21 @@ const UploadForm = () => {
         <form
           name="Upload Form"
           method="POST"
-          data-netlify-recaptcha="true"
+          netlify-honeypot="bot-field"
           data-netlify="true"
         >
           <h6>Submit your blog below:</h6>
           <hr style={{ minWidth: `90%`, borderColor: "black", marginTop: 0 }} />
           <input type="hidden" name="form-name" value="Upload Form" />
+          <p hidden>
+            <label>
+              Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
+          </p>
           <p>
             <label>
-              Name : <input minLength="3" maxLength="20" type="text" name="name" />{" "}
+              Name :{" "}
+              <input minLength="3" maxLength="20" type="text" name="name" />{" "}
             </label>
           </p>
           <p>
@@ -26,7 +32,8 @@ const UploadForm = () => {
           </p>
           <p>
             <label>
-              Title : <input minLength="10" maxLength="50" type="text" name="title" />
+              Title :{" "}
+              <input minLength="10" maxLength="50" type="text" name="title" />
             </label>
           </p>
           <p>
@@ -34,7 +41,6 @@ const UploadForm = () => {
               Upload : <input type="file" name="Blog file" />
             </label>
           </p>
-          <div data-netlify-recaptcha="true"></div>
           <p>
             <button type="submit">Send your Blog</button>
           </p>
