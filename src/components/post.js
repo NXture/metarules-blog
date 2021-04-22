@@ -10,6 +10,7 @@ import {
 } from "reactstrap"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { slugify } from "../utils/utilityFunctions"
+import "../styles/latest-post.css"
 
 const Post = ({ title, author, slug, date, body, fluid, tags }) => {
   return (
@@ -22,10 +23,10 @@ const Post = ({ title, author, slug, date, body, fluid, tags }) => {
         />
       </Link>
       <CardBody>
-        <CardTitle>
+        <CardTitle className="post-title">
           <Link to={slug}>{title}</Link>
         </CardTitle>
-        <CardSubtitle>
+        <CardSubtitle className="post-info">
           <span className="text-info">{date}</span> by{" "}
           <span className="text-info">{author}</span>
         </CardSubtitle>

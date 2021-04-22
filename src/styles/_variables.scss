@@ -1,6 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-
-$site-font: "Lato", sans-serif;
+@font-face {
+  font-family: "wotfard";
+  src: url(../fonts/wotfard/wotfard-regular-webfont.woff2);
+}
+$site-font: "wotfard", sans-serif;
 
 $light-gray: rgb(240, 240, 240);
 $dark-gray: rgb(80, 80, 80);

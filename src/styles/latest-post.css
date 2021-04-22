@@ -1,24 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap");
+@font-face {
+  font-family: "wotfard-regular";
+  src: url(../fonts/wotfard/wotfard-regular-webfont.woff2);
+}
+
+@font-face {
+  font-family: "wotfard-semibold";
+  src: url(../fonts/wotfard/wotfard-semibold-webfont.woff2);
+}
+
+@font-face {
+  font-family: "wotfard-medium";
+  src: url(../fonts/wotfard/wotfard-medium-webfont.woff2);
+}
 
 .recent-post-info {
   font-size: small;
-  font-family: "Noto Serif", serif;
-  font-style: italic;
-  letter-spacing: 1px;
+  font-family: "wotfard-semibold", serif;
 }
 
-.recent-post-info span {
-  color: rgb(56, 161, 243);
-}
-
-.recent-post h6 {
-  font-family: "Noto Serif", serif;
+.recent-post {
+  font-family: "wotfard-semibold", serif;
   font-size: medium;
-  font-weight: bold;
-  letter-spacing: 1px;
 }
 
 .recent-post-img {
   width: 100%;
   height: auto;
+}
+
+.card-title {
+  font-family: "wotfard-medium", serif;
+  letter-spacing: 1px;
+}
+
+.post-title {
+  font-family: "wotfard-semibold";
+  font-size: large;
+}
+
+.post-info {
+  font-family: "wotfard-semibold";
 }

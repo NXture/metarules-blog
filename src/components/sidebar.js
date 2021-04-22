@@ -46,7 +46,7 @@ const Sidebar = ({ author, authorFluid }) => {
       </Card>
       <Card>
         <CardBody>
-          <CardTitle className="text-center text-uppercase md-3">
+          <CardTitle className="card-title text-center text-uppercase md-3">
             Recent Posts
           </CardTitle>
           <StaticQuery
@@ -65,8 +65,7 @@ const Sidebar = ({ author, authorFluid }) => {
                             </Link>
                           </h6>
                           <p className="recent-post-info">
-                            <span>{node.frontmatter.author}</span> on{" "}
-                            <span>{node.frontmatter.date}</span>
+                            {node.frontmatter.author} | {node.frontmatter.date}
                           </p>
                         </div>
                       </Col>

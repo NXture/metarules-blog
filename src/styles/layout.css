@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@font-face {
+  font-family: "wotfard-semibold";
+  src: url(../fonts/wotfard/wotfard-semibold-webfont.woff2);
+}
 
 .main-content {
   display: flex;
@@ -9,7 +13,6 @@
   padding: 3% 5% 3% 5%;
   border-radius: 10px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
-  letter-spacing: 1px;
 }
 
 .main-content span {
@@ -36,4 +39,8 @@
 .submit-blog h2,
 h3 {
   text-align: center;
+}
+
+.blog-title {
+  font-family: "wotfard-semibold";
 }

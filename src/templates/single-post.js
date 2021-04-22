@@ -22,7 +22,7 @@ const BlogPost = ({ data, pageContext }) => {
     title: post.title,
   }
   return (
-    <Layout
+    <Layout 
       pageTitle={post.title}
       postAuthor={author}
       authorImage={data.file.childImageSharp.gatsbyImageData}
