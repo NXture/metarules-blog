@@ -47,7 +47,7 @@ const SubmitBlog = () => (
         </p>
         <p>
           Please email relevant submissions - to{" "}
-          <a href="/submit-a-blog">metarules@gmail.com</a> and follow submission
+          <span><a href="/submit-a-blog">metarules@gmail.com</a></span> and follow submission
           guidelines below.
         </p>
         <h3>Submission guidelines</h3>
@@ -88,7 +88,7 @@ const SubmitBlog = () => (
         </ol>
         <h3>For Code</h3>
         <p>
-          For code, use <a href="https://gist.github.com/">Github gists</a> for
+          For code, use <span><a href="https://gist.github.com/">Github gists</a></span> for
           code hosting, and include the gist URL in your submission where
           appropriate, and we can embed the code in your post.
         </p>

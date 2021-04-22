@@ -1,7 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 @font-face {
-  font-family: "wotfard-regular";
-  src: url(../fonts/wotfard/wotfard-regular-webfont.woff2);
+  font-family: "wotfard-semibold";
+  src: url(../fonts/wotfard/wotfard-semibold-webfont.woff2);
 }
 
 /*header style*/
@@ -25,11 +24,10 @@
 
 .nav-link li {
   justify-content: center;
-  font-family: "wotfard-regular", sans-serif;
   padding: 2px;
 }
 
 .brand-name {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
+  font-family: "wotfard-semibold", sans-serif;
+  letter-spacing: 1px;
 }

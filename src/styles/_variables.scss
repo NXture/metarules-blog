@@ -1,8 +1,9 @@
 @font-face {
-  font-family: "wotfard";
-  src: url(../fonts/wotfard/wotfard-regular-webfont.woff2);
+  font-family: "wotfard-regular";
+  font-display: auto;
+  src: url(../fonts/wotfard/wotfard-regular-webfont.woff2) format("woff2");
 }
-$site-font: "wotfard", sans-serif;
+$site-font: "wotfard-regular", sans-serif;
 
 $light-gray: rgb(240, 240, 240);
 $dark-gray: rgb(80, 80, 80);

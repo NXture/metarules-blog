@@ -12,7 +12,6 @@ import {
   Col,
 } from "reactstrap"
 import { GatsbyImage } from "gatsby-plugin-image"
-import "../styles/latest-post.css"
 
 const Sidebar = ({ author, authorFluid }) => {
   return (
@@ -35,7 +34,7 @@ const Sidebar = ({ author, authorFluid }) => {
       <Card>
         <CardBody>
           <CardTitle className="text-center text-uppercase">
-            Advertisement
+            <span>ADVERTISEMENT</span>
           </CardTitle>
           <img
             src="https://via.placeholder.com/320x200"
@@ -47,7 +46,7 @@ const Sidebar = ({ author, authorFluid }) => {
       <Card>
         <CardBody>
           <CardTitle className="card-title text-center text-uppercase md-3">
-            Recent Posts
+            <span>Recent Posts</span>
           </CardTitle>
           <StaticQuery
             query={sidebarQuery}
@@ -58,21 +57,21 @@ const Sidebar = ({ author, authorFluid }) => {
                     <hr style={{ marginTop: 0 }} />
                     <Row>
                       <Col xs="8">
-                        <div className="recent-post">
+                        <div>
                           <h6>
                             <Link to={node.fields.slug}>
                               {node.frontmatter.title}
                             </Link>
                           </h6>
-                          <p className="recent-post-info">
-                            {node.frontmatter.author} | {node.frontmatter.date}
+                          <p style={{ fontSize: "small" }}>
+                            <span>{node.frontmatter.author}</span> |{" "}
+                            <span>{node.frontmatter.date}</span>
                           </p>
                         </div>
                       </Col>
                       <Col xs="4">
                         <Link to={node.fields.slug}>
                           <GatsbyImage
-                            className="recent-post-img"
                             image={
                               node.frontmatter.image.childImageSharp
                                 .gatsbyImageData
@@ -92,7 +91,7 @@ const Sidebar = ({ author, authorFluid }) => {
       <Card>
         <CardBody>
           <CardTitle className="text-center text-uppercase md-3">
-            Newsletter
+            <span>Newsletter</span>
           </CardTitle>
           <Form className="text-center">
             <FormGroup>

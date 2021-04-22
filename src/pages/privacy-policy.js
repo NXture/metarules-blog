@@ -13,7 +13,7 @@ const PrivacyPolicy = () => (
         </h2>
         <p>
           <span>metarules</span> operates the{" "}
-          <a href="https://metarules.tech">www.metarules.tech</a> website, which
+          <span><a href="https://metarules.tech">www.metarules.tech</a></span> website, which
           provides services for vistors and bloggers.
         </p>
         <p>

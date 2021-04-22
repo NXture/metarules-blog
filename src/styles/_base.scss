@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "wotfard-semibold";
+  src: url(../fonts/wotfard/wotfard-semibold-webfont.woff2);
+}
+
 .container#content {
   margin-top: 40px;
 }
@@ -14,9 +19,20 @@ a {
 }
 
 h1 {
+  font-family: "wotfard-semibold";
   margin-bottom: 20px;
   text-align: center;
 }
+
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  font-family: "wotfard-semibold";
+}
+
 .navbar {
   background-color: white;
   // border-right: 1px solid rgba(0, 0, 0, 0.4);
@@ -25,11 +41,12 @@ h1 {
 }
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-brand {
-  color: #0056b3;
+  color: rgb(52, 80, 173);
   &:hover {
     color: #007bff;
   }
 }
+
 ul {
   list-style: none;
   padding: 0;

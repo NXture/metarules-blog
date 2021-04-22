@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <div className="navbar-container">
       <div className="top-info" style={{ maxWidth: 700 }}>
-        <h6
+        <p
           style={{
             marginTop: `0.2rem`,
             marginBottom: `0.4rem`,
@@ -37,7 +37,7 @@ const Header = () => {
         >
           Free Online Resources for Beginners and students to learn, understand
           & develop!
-        </h6>
+        </p>
       </div>
       <div style={{ margin: `auto`, maxWidth: 900, padding: `0 1rem` }}>
         <Navbar sticky="top" id="cstm-navbar" expand="sm">

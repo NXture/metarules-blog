@@ -27,7 +27,7 @@ const TeamPage = () => (
         <p>
           Anyone can write on metarules. Students, Thought-leaders, journalists,
           experts, and individuals with unique perspectives can share their
-          thinking here. Be a part of metarules-blog by submitting a blog. <a href="/submit-a-blog">Submissions Guildelines</a>
+          thinking here. Be a part of metarules-blog by submitting a blog. <a href="/submit-a-blog"><span>Submissions Guildelines</span></a>
         </p>
         <h3>Our folk</h3>
         <Row className="md-4">

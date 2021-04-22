@@ -1,7 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 @font-face {
   font-family: "wotfard-semibold";
   src: url(../fonts/wotfard/wotfard-semibold-webfont.woff2);
+}
+
+@font-face {
+  font-family: "wotfard-medium";
+  src: url(../fonts/wotfard/wotfard-medium-webfont.woff2);
 }
 
 .main-content {
@@ -16,8 +20,7 @@
 }
 
 .main-content span {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: bolder;
+  font-family: "wotfard-semibold", sans-serif;
   color: rgb(52, 80, 173);
 }
 
@@ -31,16 +34,7 @@
   justify-content: space-evenly;
 }
 
-.cstm-footer {
-  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
-    rgba(17, 17, 26, 0.1) 0px 0px 8px;
-}
-
 .submit-blog h2,
 h3 {
   text-align: center;
-}
-
-.blog-title {
-  font-family: "wotfard-semibold";
 }
