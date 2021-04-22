@@ -1,6 +1,7 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import UploadForm from "../components/uploadForm"
 import "../styles/index.scss"
 
 const SubmitBlog = () => (
@@ -65,24 +66,24 @@ const SubmitBlog = () => (
             images since they slow down the page loading.
           </li>
           <li>
-            include a suggested summary (~ 2-3 lines, up to 200 characters
+            Include a suggested summary (~ 2-3 lines, up to 200 characters
             including spaces)
           </li>
           <li>
-            include 4-5 suggested Tags{" "}
+            Include 4-5 suggested Tags{" "}
             <span>
               <a href="/tags">(see current metarules tags)</a>
             </span>
             .
           </li>
           <li>
-            include a brief author bio and author URL: your Twitter, Facebook,
+            Include a brief author bio and author URL: your Twitter, Facebook,
             or LinkedIn page that you want linked to your author name.
           </li>
           <li>
             We expect an opinion to be supported by facts, links, and
-            references. A submission without at least 3 external supporting
-            links or references will be rejected. Links in author bio or to the
+            references. A submission with at least 3 external supporting
+            links or references will be appreciated. Links in author bio or to the
             author company do not count.
           </li>
         </ol>
@@ -92,7 +93,7 @@ const SubmitBlog = () => (
           code hosting, and include the gist URL in your submission where
           appropriate, and we can embed the code in your post.
         </p>
-        <hr style={{ minWidth: `80%` }} />
+        <hr style={{ minWidth: `80` }} />
         <p>
           <span>metarules-blog</span> reserves the right to edit all submissions
           for length and to correct errors/typos.
@@ -101,7 +102,9 @@ const SubmitBlog = () => (
           We may modify the titles of selected articles, in consultation with
           authors, to improve their appeal to <span>metarules</span> readers.
         </p>
+        <UploadForm/>
       </div>
+      
     </div>
   </Layout>
 )

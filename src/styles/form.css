@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "wotfard-semibold";
+  src: url(../fonts/wotfard/wotfard-semibold-webfont.woff2);
+}
+
+@font-face {
+  font-family: "wotfard-medium";
+  src: url(../fonts/wotfard/wotfard-medium-webfont.woff2);
+}
+.form-container {
+  border-radius: 10px;
+  max-width: 80%;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.form-content {
+  text-align: center;
+  padding: 5%;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container form p {
+  display: flex;
+  justify-content: space-around;
+  font-family: "wotfard-semibold";
+  font-size: small;
+}
+
+.form-container label {
+  text-align: center;
+}
+
+.form-container input {
+  font: medium 1em "wotfard-medium";
+  border: 2px solid #333;
+  border-radius: 6px;
+  background: none;
+  max-width: 60%;
+}
+
+.form-container button {
+  padding: 5px;
+  font: bold 0.6em sans-serif;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  transform: rotate(-1.5deg);
+}
+
+.form-container button:after {
+  content: " >>>";
+}
+
+.form-container button:hover,
+button:focus {
+  outline: none;
+  background: #000;
+  color: #fff;
+}
