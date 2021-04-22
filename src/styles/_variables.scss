@@ -1,6 +1,6 @@
 @font-face {
   font-family: "wotfard-regular";
-  font-display: auto;
+  font-display: fallback;
   src: url(../fonts/wotfard/wotfard-regular-webfont.woff2) format("woff2");
 }
 $site-font: "wotfard-regular", sans-serif;
