@@ -20,25 +20,37 @@ const UploadForm = () => {
             </label>
           </p>
           <p>
-            <label>
+            <label for="name">
               Name :{" "}
-              <input minLength="3" maxLength="20" type="text" name="name" />{" "}
+              <input
+                minLength="3"
+                maxLength="20"
+                type="text"
+                name="name"
+                required
+              />{" "}
             </label>
           </p>
           <p>
-            <label>
-              E-mail : <input type="email" name="email" />
+            <label for="email">
+              E-mail : <input type="email" name="email" required />
             </label>
           </p>
           <p>
-            <label>
+            <label for="title">
               Title :{" "}
-              <input minLength="10" maxLength="50" type="text" name="title" />
+              <input
+                minLength="10"
+                maxLength="50"
+                type="text"
+                name="title"
+                required
+              />
             </label>
           </p>
           <p>
-            <label>
-              Upload : <input type="file" name="Blog file" />
+            <label for="file">
+              Upload : <input type="file" name="Blog file" required />
             </label>
           </p>
           <p>
