@@ -12,7 +12,7 @@ const tagsPage = ({ pageContext }) => {
       <Seo title="All tags" keywords={["tags", "topics"]} />
       <div className="main-container">
         <div className="main-content">
-          <h2>Tags - List</h2>
+          <h2>Tags - List <span role="img" aria-labelledby="tag">📌</span></h2>
           <p>Below are the tags used in this blogging site.</p>
           <ul className="tags-section">
             {tags.map(tag => (

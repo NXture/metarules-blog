@@ -48,16 +48,18 @@ const SubmitBlog = () => (
         </p>
         <p>
           Please email relevant submissions - to{" "}
-          <span><a href="/submit-a-blog">metarules@gmail.com</a></span> and follow submission
-          guidelines below.
+          <span>
+            <a href="/submit-a-blog">metarules@gmail.com</a>
+          </span>{" "}
+          and follow submission guidelines below.
         </p>
         <h3>Submission guidelines</h3>
         <ol>
           <li>Put guest blog: your blog title in the subject line.</li>
           <li>
             Send either a link to already published blog, or an original blog in
-            Microsoft Word or HTML. HTML should not have javascript or embedded
-            images (data:image).
+            Microsoft Word, Markdown or HTML. HTML should not have javascript or
+            embedded images (data:image).
           </li>
           <li>
             A typical guest blog should be 300 to 1200 words (longer blogs can
@@ -82,18 +84,24 @@ const SubmitBlog = () => (
           </li>
           <li>
             We expect an opinion to be supported by facts, links, and
-            references. A submission with at least 3 external supporting
-            links or references will be appreciated. Links in author bio or to the
+            references. A submission with at least 3 external supporting links
+            or references will be appreciated. Links in author bio or to the
             author company do not count.
           </li>
+          <span style={{ color: "red" }}>
+            (Note: Please make sure your document is below 2Mb)
+          </span>
         </ol>
         <h3>For Code</h3>
         <p>
-          For code, use <span><a href="https://gist.github.com/">Github gists</a></span> for
-          code hosting, and include the gist URL in your submission where
+          Use{" "}
+          <span>
+            <a href="https://gist.github.com/">Github gists</a>
+          </span>{" "}
+          for code hosting, and include the gist URL in your submission where
           appropriate, and we can embed the code in your post.
         </p>
-        <hr style={{ minWidth: `80` }} />
+        <hr style={{ minWidth: "80%" }} />
         <p>
           <span>metarules-blog</span> reserves the right to edit all submissions
           for length and to correct errors/typos.
@@ -102,9 +110,8 @@ const SubmitBlog = () => (
           We may modify the titles of selected articles, in consultation with
           authors, to improve their appeal to <span>metarules</span> readers.
         </p>
-        <UploadForm/>
+        <UploadForm />
       </div>
-      
     </div>
   </Layout>
 )

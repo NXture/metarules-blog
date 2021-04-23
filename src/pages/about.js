@@ -1,6 +1,7 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import ContactForm from "../components/contactForm"
 import "../styles/index.scss"
 
 const AboutPage = () => (
@@ -39,6 +40,7 @@ const AboutPage = () => (
           worlds by providing a stepping-stone and online resources to help
           beginners get started.
         </h5>
+        <ContactForm/>
       </div>
     </div>
   </Layout>

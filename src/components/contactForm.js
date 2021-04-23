@@ -1,19 +1,20 @@
 import React from "react"
 import "../styles/form.css"
 
-const UploadForm = () => {
+const ContactForm = () => {
   return (
-    <div className="form-container">
+    <div style={{minWidth: "60%"}} className="form-container">
       <div className="form-content">
         <form
-          name="Upload Form"
+          name="Contact Form"
           method="POST"
           netlify-honeypot="bot-field"
           data-netlify="true"
         >
-          <h6>Submit your blog below: <span role="img" aria-labelledby="postbox">📮</span></h6>
+          <h6 style={{marginBottom: 0}}>Let's Talk <span role="img" aria-labelledby="hi">👋</span></h6>
+          <span style={{marginTop: 0, fontSize: "small" }}>Leave us a message below.</span>
           <hr style={{ minWidth: `90%`, borderColor: "black", marginTop: 0 }} />
-          <input type="hidden" name="form-name" value="Upload Form" />
+          <input type="hidden" name="form-name" value="Contact Form" />
           <p hidden>
             <label>
               Don’t fill this out if you’re human: <input name="bot-field" />
@@ -37,30 +38,12 @@ const UploadForm = () => {
             </label>
           </p>
           <p>
-            <label for="title">
-              Title :{" "}
-              <input
-                minLength="10"
-                maxLength="50"
-                type="text"
-                name="title"
-                required
-              />
+            <label for="message">
+              Message : <textarea wrap="soft" maxLength="100" minLength="10" rows="3"  name="message" required></textarea>
             </label>
           </p>
           <p>
-            <label for="file">
-              Upload :{" "}
-              <input
-                accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                type="file"
-                name="Blog file"
-                required
-              />
-            </label>
-          </p>
-          <p>
-            <button type="submit">Send your Blog</button>
+            <button type="submit">Send</button>
           </p>
         </form>
       </div>
@@ -68,4 +51,4 @@ const UploadForm = () => {
   )
 }
 
-export default UploadForm
+export default ContactForm
