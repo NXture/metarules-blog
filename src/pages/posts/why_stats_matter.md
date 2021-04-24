@@ -8,7 +8,7 @@ tags:
   - statistics
 ---
 
-_Everyone wants answers_ and in the modern world, often the most import answers come in the form of numbers.
+**_Everyone wants answers_** and in the modern world, often the most import answers come in the form of numbers.
 
 But why do you want these answers? What could you do with those magic numbers?
 

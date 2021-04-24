@@ -77,7 +77,7 @@ const indexQuery = graphql`
             tags
             image {
               childImageSharp {
-                gatsbyImageData(layout: CONSTRAINED)
+                gatsbyImageData(transformOptions: {fit: INSIDE})
               }
             }
           }

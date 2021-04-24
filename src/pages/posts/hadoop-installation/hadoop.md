@@ -193,7 +193,7 @@ cd ~/hadoop/hadoop-3.3.0/etc/hadoop
 
    Add the following configuration:
 
-   ```html
+   ```xml
    <configuration>
      <property>
        <name>fs.defaultFS</name>
@@ -211,7 +211,7 @@ cd ~/hadoop/hadoop-3.3.0/etc/hadoop
 
    Add the following configuration:
 
-   ```html
+   ```xml
    <configuration>
      <property>
        <name>dfs.replication</name>

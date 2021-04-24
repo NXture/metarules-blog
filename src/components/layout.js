@@ -5,6 +5,7 @@ import { Row, Col } from "reactstrap"
 import Sidebar from "./sidebar"
 import Header from "./header"
 import GoogleAdsHorizontal from "../components/Google-Ads/GoogleAdsHorizontal"
+import GoogleAdsSquare from "./Google-Ads/GoogleAdsSquare"
 import "../styles/index.scss"
 
 const Layout = ({ authorImage, children, pageTitle, postAuthor }) => {
@@ -26,12 +27,11 @@ const Layout = ({ authorImage, children, pageTitle, postAuthor }) => {
         <Row>
           <Col md="8">{children}</Col>
           <Col md="4">
+            <GoogleAdsSquare/>
             <Sidebar author={postAuthor} authorFluid={authorImage} />
           </Col>
         </Row>
-        <div>
-          <GoogleAdsHorizontal/>
-        </div>
+        <GoogleAdsHorizontal />
       </div>
       <footer
         style={{
@@ -42,9 +42,17 @@ const Layout = ({ authorImage, children, pageTitle, postAuthor }) => {
             "rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px",
         }}
       >
-        <div  style={{paddingBottom: `5%`}}>
-          <h4> <a href="/">metarules-blog</a></h4>
-          <p>Thanks for Reading!<span role="img" aria-labelledby="Red Ballon">🎈</span></p>
+        <div style={{ paddingBottom: `5%` }}>
+          <h4>
+            {" "}
+            <a href="/">metarules-blog</a>
+          </h4>
+          <p>
+            Thanks for Reading!
+            <span role="img" aria-labelledby="Red Ballon">
+              🎈
+            </span>
+          </p>
         </div>
         <span>{data.site.siteMetadata.title}</span> © {new Date().getFullYear()}
         , Built with

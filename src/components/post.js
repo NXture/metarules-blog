@@ -14,9 +14,8 @@ import { slugify } from "../utils/utilityFunctions"
 const Post = ({ title, author, slug, date, body, fluid, tags }) => {
   return (
     <Card>
-      <Link to={slug}>
+      <Link style={{ display: `flex`, justifyContent: `center` }} to={slug}>
         <GatsbyImage
-          className="card-image-top"
           image={fluid}
           alt="post thumbnail"
         />
