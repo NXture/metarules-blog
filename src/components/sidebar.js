@@ -12,18 +12,25 @@ import {
   Col,
 } from "reactstrap"
 import { GatsbyImage } from "gatsby-plugin-image"
+import "../styles/layout.css"
 
 const Sidebar = ({ author, authorFluid }) => {
   return (
     <div style={{ position: "sticky", top: 10 }}>
       {author && (
         <Card>
-          <GatsbyImage
-            className="card-image-top"
-            image={authorFluid}
-            alt="author"
-          />
-          <CardBody>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              maxWidth: 200,
+              alignSelf: "center",
+              padding: "5% 10%",
+            }}
+          >
+            <GatsbyImage id="author-img" image={authorFluid} alt="author" />
+          </div>
+          <CardBody style={{ paddingTop: 0 }}>
             <CardTitle className="text-center text-uppercase mb-3">
               {author.name}
             </CardTitle>
@@ -99,6 +106,7 @@ const Sidebar = ({ author, authorFluid }) => {
                 type="email"
                 name="email"
                 placeholder="Your Email address"
+                disabled
               />
             </FormGroup>
             <button className="btn btn-outline-success text-upercase">

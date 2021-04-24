@@ -38,3 +38,7 @@
 h3 {
   text-align: center;
 }
+
+#author-img {
+  border-radius: 50%;
+}
