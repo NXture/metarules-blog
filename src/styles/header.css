@@ -1,5 +1,6 @@
 @font-face {
   font-family: "wotfard-semibold";
+  font-display: fallback;
   src: url(../fonts/wotfard/wotfard-semibold-webfont.woff2);
 }
 

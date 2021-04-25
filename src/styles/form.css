@@ -1,10 +1,12 @@
 @font-face {
   font-family: "wotfard-semibold";
+  font-display: fallback;
   src: url(../fonts/wotfard/wotfard-semibold-webfont.woff2);
 }
 
 @font-face {
   font-family: "wotfard-medium";
+  font-display: fallback;
   src: url(../fonts/wotfard/wotfard-medium-webfont.woff2);
 }
 .form-container {

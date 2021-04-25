@@ -5,7 +5,6 @@ import { Row, Col } from "reactstrap"
 import Sidebar from "./sidebar"
 import Header from "./header"
 import GoogleAdsHorizontal from "../components/Google-Ads/GoogleAdsHorizontal"
-import GoogleAdsSquare from "./Google-Ads/GoogleAdsSquare"
 import "../styles/index.scss"
 
 const Layout = ({ authorImage, children, pageTitle, postAuthor }) => {
@@ -27,7 +26,6 @@ const Layout = ({ authorImage, children, pageTitle, postAuthor }) => {
         <Row>
           <Col md="8">{children}</Col>
           <Col md="4">
-            <GoogleAdsSquare/>
             <Sidebar author={postAuthor} authorFluid={authorImage} />
           </Col>
         </Row>

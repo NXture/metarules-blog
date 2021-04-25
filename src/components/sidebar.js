@@ -12,6 +12,7 @@ import {
   Col,
 } from "reactstrap"
 import { GatsbyImage } from "gatsby-plugin-image"
+import GoogleAdsSquare from "./Google-Ads/GoogleAdsSquare"
 import "../styles/layout.css"
 
 const Sidebar = ({ author, authorFluid }) => {
@@ -38,6 +39,7 @@ const Sidebar = ({ author, authorFluid }) => {
           </CardBody>
         </Card>
       )}
+      <GoogleAdsSquare/>
       <Card>
         <CardBody>
           <CardTitle className="text-center text-uppercase">
@@ -123,7 +125,7 @@ const sidebarQuery = graphql`
   query sidebarQuery {
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
-      limit: 3
+      limit: 4
     ) {
       edges {
         node {
