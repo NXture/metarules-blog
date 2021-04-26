@@ -19,7 +19,6 @@ export default function HTML(props) {
           data-ad-client="ca-pub-7004283638114501"
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-          crossOrigin="anonymous"
         ></script>
         {props.headComponents}
       </head>
