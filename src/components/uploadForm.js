@@ -52,9 +52,10 @@ const UploadForm = () => {
             <label for="file">
               Upload :{" "}
               <input
-                accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                 type="file"
+                id="file"
                 name="Blog file"
+                accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                 required
               />
             </label>
