@@ -55,7 +55,7 @@ const UploadForm = () => {
                 type="file"
                 id="file"
                 name="Blog file"
-                accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                 required
               />
             </label>
