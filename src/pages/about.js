@@ -6,7 +6,7 @@ import "../styles/index.scss"
 
 const AboutPage = () => (
   <Layout>
-    <Seo title="About" />
+    <Seo title="About" keywords={[`gatsby`, `application`, `react`]} />
     <div className="main-container">
       <div className="main-content">
         <h2>

@@ -12,7 +12,7 @@ const IndexPage = () => {
   return (
     <div>
       <Layout>
-        <Seo title="Home" />
+        <Seo title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <div className="main-container">
           <div className="main-content">
             <h2>

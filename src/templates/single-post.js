@@ -6,10 +6,9 @@ import { Badge, Card, CardBody, CardSubtitle } from "reactstrap"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { slugify } from "../utils/utilityFunctions"
 import authors from "../utils/authors"
-//import kebabCase from "lodash/kebabCase"
 import { Disqus } from "gatsby-plugin-disqus"
 
-const BlogPost = ({ data, pageContext }) => {
+const BlogPost = ({ data, pageContext, location }) => {
   const post = data.markdownRemark.frontmatter
   const author = authors.find(x => x.name === post.author)
 
@@ -22,12 +21,19 @@ const BlogPost = ({ data, pageContext }) => {
     title: post.title,
   }
   return (
-    <Layout 
+    <Layout
       pageTitle={post.title}
       postAuthor={author}
       authorImage={data.file.childImageSharp.gatsbyImageData}
     >
-      <Seo title={post.title} />
+      <Seo
+        author={post.author}
+        title={post.title}
+        keywords={post.tags}
+        description={post.description}
+        url={siteUrl}
+        pathname={location.pathname}
+      />
       <Card>
         <GatsbyImage
           className="card-image-top"
@@ -39,7 +45,7 @@ const BlogPost = ({ data, pageContext }) => {
             <span className="text-info">{post.date}</span> by{" "}
             <span className="text-info">{post.author}</span>
           </CardSubtitle>
-          <span style={{ fontStyle: "italic"}}>Tags: {" "}</span>
+          <span style={{ fontStyle: "italic" }}>Tags: </span>
           <ul className="post-tags">
             {data.markdownRemark.frontmatter.tags.map(tag => (
               <li key={tag}>
@@ -150,7 +156,7 @@ export const postQuery = graphql`
         tags
         image {
           childImageSharp {
-            gatsbyImageData(transformOptions: {fit: INSIDE})
+            gatsbyImageData(transformOptions: { fit: INSIDE })
           }
         }
       }

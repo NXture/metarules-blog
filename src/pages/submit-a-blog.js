@@ -6,7 +6,7 @@ import "../styles/index.scss"
 
 const SubmitBlog = () => (
   <Layout>
-    <Seo title="Submit a Blog" />
+    <Seo title="Submit a Blog" keywords={[`gatsby`, `application`, `react`]}/>
     <div className="main-container">
       <div className="main-content submit-blog">
         <h2>
