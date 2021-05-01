@@ -5,7 +5,7 @@ import "../styles/index.scss"
 
 const PrivacyPolicy = () => (
   <Layout>
-    <Seo title="Privacy Policy" />
+    <Seo title="Privacy Policy"/>
     <div className="main-container">
       <div className="main-content">
         <h2>

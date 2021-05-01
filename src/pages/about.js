@@ -6,7 +6,20 @@ import "../styles/index.scss"
 
 const AboutPage = () => (
   <Layout>
-    <Seo title="About" keywords={[`gatsby`, `application`, `react`]} />
+    <Seo
+      title="About"
+      keywords={[
+        `About`,
+        `metarules`,
+        `data science`,
+        `blog`,
+        `metarules.tech`,
+        `data science`,
+        `gatsby`, 
+        `data science`,
+        `sharing`,
+      ]}
+    />
     <div className="main-container">
       <div className="main-content">
         <h2>
@@ -40,7 +53,7 @@ const AboutPage = () => (
           worlds by providing a stepping-stone and online resources to help
           beginners get started.
         </h5>
-        <ContactForm/>
+        <ContactForm />
       </div>
     </div>
   </Layout>

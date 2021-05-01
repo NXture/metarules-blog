@@ -12,7 +12,29 @@ const IndexPage = () => {
   return (
     <div>
       <Layout>
-        <Seo title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <Seo
+          title="Home"
+          keywords={[
+            `Home`,
+            `application`,
+            `react`,
+            `gatsby`,
+            `metarules`,
+            `blog`,
+            `metarules.tech`,
+            `data science`,
+            `technology`,
+            `statistics`,
+            `programming`,
+            `AI`,
+            `machine learning`,
+            `artificial intelligence`,
+            `learning`,
+            `sharing`,
+            `web development`,
+            `data analytics`, 
+          ]}
+        />
         <div className="main-container">
           <div className="main-content">
             <h2>
@@ -77,7 +99,7 @@ const indexQuery = graphql`
             tags
             image {
               childImageSharp {
-                gatsbyImageData(transformOptions: {fit: INSIDE})
+                gatsbyImageData(transformOptions: { fit: INSIDE })
               }
             }
           }

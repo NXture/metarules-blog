@@ -9,7 +9,21 @@ import { slugify } from "../utils/utilityFunctions"
 
 const TeamPage = () => (
   <Layout>
-    <Seo title="Team" keywords={[`gatsby`, `application`, `react`]} />
+    <Seo
+      title="Team"
+      keywords={[
+        `team`,
+        `application`,
+        `react`,
+        `gatsby`,
+        `metarules`,
+        `blog`,
+        `metarules.tech`,
+        `data science`,
+        `technology`,
+        `statistics`,
+      ]}
+    />
     <div className="main-container">
       <div className="main-content">
         <h2>Meet the Team.</h2>
@@ -27,7 +41,10 @@ const TeamPage = () => (
         <p>
           Anyone can write on metarules. Students, Thought-leaders, journalists,
           experts, and individuals with unique perspectives can share their
-          thinking here. Be a part of metarules-blog by submitting a blog. <a href="/submit-a-blog"><span>Submissions Guildelines</span></a>
+          thinking here. Be a part of metarules-blog by submitting a blog.{" "}
+          <a href="/submit-a-blog">
+            <span>Submissions Guildelines</span>
+          </a>
         </p>
         <h3>Our folk</h3>
         <Row className="md-4">
