@@ -7,7 +7,7 @@ import PaginationLinks from "../components/paginationLinks"
 import "../styles/layout.css"
 
 const IndexPage = () => {
-  const postsPerPage = 2
+  const postsPerPage = 3
   let numberOfPages
   return (
     <div>

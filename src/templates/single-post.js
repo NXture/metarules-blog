@@ -11,8 +11,8 @@ import { Disqus } from "gatsby-plugin-disqus"
 const BlogPost = ({ data, pageContext, location }) => {
   const post = data.markdownRemark.frontmatter
   const author = authors.find(x => x.name === post.author)
+  const image = post.image ? post.image.childImageSharp.resize : null
 
-  const baseUrl = "https://metarules.tech"
   const siteUrl = "https://metarules.tech"
 
   const DisqusConfig = {
@@ -30,8 +30,8 @@ const BlogPost = ({ data, pageContext, location }) => {
         author={post.author}
         title={post.title}
         keywords={post.tags}
-        description={post.description}
-        url={siteUrl}
+        description={data.markdownRemark.excerpt}
+        image={image}
         pathname={location.pathname}
       />
       <Card>
@@ -67,7 +67,7 @@ const BlogPost = ({ data, pageContext, location }) => {
             <a
               href={
                 "https://www.facebook.com/sharer/sharer.php?u=" +
-                baseUrl +
+                siteUrl +
                 pageContext.slug
               }
               className="facebook"
@@ -84,7 +84,7 @@ const BlogPost = ({ data, pageContext, location }) => {
             <a
               href={
                 "https://twitter.com/share?url=" +
-                baseUrl +
+                siteUrl +
                 pageContext.slug +
                 "&text=" +
                 post.title +
@@ -105,7 +105,7 @@ const BlogPost = ({ data, pageContext, location }) => {
             <a
               href={
                 "https://plus.google.com/share?url=" +
-                baseUrl +
+                siteUrl +
                 pageContext.slug
               }
               className="google"
@@ -122,7 +122,7 @@ const BlogPost = ({ data, pageContext, location }) => {
             <a
               href={
                 "https://www.linkedin.com/shareArticle?url=" +
-                baseUrl +
+                siteUrl +
                 pageContext.slug
               }
               className="linkedin"
@@ -163,6 +163,7 @@ export const postQuery = graphql`
       fields {
         slug
       }
+      excerpt
     }
     file(relativePath: { eq: $imageUrl }) {
       childImageSharp {
