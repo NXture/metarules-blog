@@ -39,7 +39,6 @@ const Sidebar = ({ author, authorFluid }) => {
           </CardBody>
         </Card>
       )}
-      <GoogleAdsSquare/>
       <Card>
         <CardBody>
           <CardTitle className="text-center text-uppercase">
@@ -50,6 +49,7 @@ const Sidebar = ({ author, authorFluid }) => {
             alt="ads"
             style={{ width: "100%" }}
           />
+          <GoogleAdsSquare/>
         </CardBody>
       </Card>
       <Card>

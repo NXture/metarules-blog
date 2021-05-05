@@ -35,12 +35,12 @@ const Layout = ({ authorImage, children, pageTitle, postAuthor }) => {
         style={{
           marginTop: `2rem`,
           backgroundColor: "white",
-          padding: `4% 10% 2% 10%`,
+          padding: `4% 10% 1% 10%`,
           boxShadow:
             "rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px",
         }}
       >
-        <div style={{ paddingBottom: `5%` }}>
+        <div style={{ paddingBottom: `4%` }}>
           <h4>
             {" "}
             <a href="/">metarules-blog</a>
@@ -52,11 +52,14 @@ const Layout = ({ authorImage, children, pageTitle, postAuthor }) => {
             </span>
           </p>
         </div>
+        <div style={{ fontSize: "14px" }}>
+        <p style={{marginBottom: 0}}>Our site uses <span>cookies</span>. Please hit back button if you're not happy about that!</p>
         <span>{data.site.siteMetadata.title}</span> © {new Date().getFullYear()}
         , Built with
         {` `}
-        <a href="https://reactjs.org/">ReactJS</a> <span>/</span>{" "}
+        <a href="https://reactjs.org/">GatsbyJS</a> <span>/</span>{" "}
         <a href="/privacy-policy">Our Privacy Policy</a>
+        </div>
       </footer>
     </>
   )

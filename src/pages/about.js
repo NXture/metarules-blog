@@ -15,7 +15,7 @@ const AboutPage = () => (
         `blog`,
         `metarules.tech`,
         `data science`,
-        `gatsby`, 
+        `gatsby`,
         `data science`,
         `sharing`,
       ]}
@@ -26,8 +26,9 @@ const AboutPage = () => (
           About <span>metarules</span>.
         </h2>
         <p>
-          <span>metarules</span> is a blogging site on AI, Analytics, Big Data,
-          Data Science, Machine Learning and related topics.
+          <span>metarules</span> is a social blogging and content sharing
+          platform on AI, Analytics, Big Data, Data Science, Machine Learning
+          and related topics.
         </p>
         <p>
           We are on a mission to share & make programming, data skills & other
@@ -51,7 +52,7 @@ const AboutPage = () => (
         <h5>
           At <span>metarules-blog</span> we strive to combine the best of both
           worlds by providing a stepping-stone and online resources to help
-          beginners get started.
+          self-learners & beginners get started.
         </h5>
         <ContactForm />
       </div>
