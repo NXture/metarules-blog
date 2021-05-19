@@ -1,7 +1,7 @@
 ---
 title: "The Real purpose of Code"
 date: 2021-04-12
-author: "Varun SriVathsa"
+author: "Varun Srivathsa"
 image: "../../images/post-images/code_purpose.png"
 tags:
   - code

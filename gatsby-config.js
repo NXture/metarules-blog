@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `metarules`,
     description: `Free online resources on AI, Analytics, Big Data, Data Science, Machine Learning, Statistics and related topics. We at metarules are on a mission to share and make data skills and other interesting resources accessible for learners and beginners everywhere.`,
-    author: `Varun SriVathsa`,
+    author: `Varun Srivathsa`,
     siteUrl: `https://www.metarules.tech`,
     social: {
       twitter: `varunVarun2710`
@@ -92,7 +92,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    `gatsby-plugin-offline`,
+    //`gatsby-plugin-offline`,
     {
       resolve: "gatsby-plugin-firebase",
       options: {

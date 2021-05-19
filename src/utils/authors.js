@@ -1,6 +1,6 @@
 const authors = [
   {
-    name: "Varun SriVathsa",
+    name: "Varun Srivathsa",
     imageUrl: "varun.jpg",
     bio:
       "A freelancer and student, persuing a career in Data Science and Statistics." +
