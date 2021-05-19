@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Row, Col } from "reactstrap"
 import Sidebar from "./sidebar"
 import Header from "./header"
-import GoogleAdsHorizontal from "../components/Google-Ads/GoogleAdsHorizontal"
 import "../styles/index.scss"
 
 const Layout = ({ authorImage, children, pageTitle, postAuthor }) => {
@@ -29,7 +28,6 @@ const Layout = ({ authorImage, children, pageTitle, postAuthor }) => {
             <Sidebar author={postAuthor} authorFluid={authorImage} />
           </Col>
         </Row>
-        <GoogleAdsHorizontal />
       </div>
       <footer
         style={{

@@ -12,7 +12,6 @@ import {
   Col,
 } from "reactstrap"
 import { GatsbyImage } from "gatsby-plugin-image"
-import GoogleAdsSquare from "./Google-Ads/GoogleAdsSquare"
 import "../styles/layout.css"
 
 const Sidebar = ({ author, authorFluid }) => {
@@ -49,7 +48,6 @@ const Sidebar = ({ author, authorFluid }) => {
             alt="ads"
             style={{ width: "100%" }}
           />
-          <GoogleAdsSquare/>
         </CardBody>
       </Card>
       <Card>

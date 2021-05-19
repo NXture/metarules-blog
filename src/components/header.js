@@ -1,7 +1,8 @@
 import * as React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 import { Navbar, Nav } from "react-bootstrap"
 import "../styles/header.css"
+import { StaticImage } from "gatsby-plugin-image"
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
@@ -10,7 +11,7 @@ const ListLink = props => (
 )
 
 const Header = () => {
-  const data = useStaticQuery(
+  /*const data = useStaticQuery(
     graphql`
       query {
         site {
@@ -20,7 +21,7 @@ const Header = () => {
         }
       }
     `
-  )
+  )*/
 
   return (
     <div className="navbar-container">
@@ -39,10 +40,18 @@ const Header = () => {
           & develop!
         </p>
       </div>
-      <div style={{ margin: `auto`, maxWidth: 900, padding: `0 1rem` }}>
-        <Navbar sticky="top" id="cstm-navbar" expand="sm">
-          <Navbar.Brand className="brand-name">
-            <Link to="/">{data.site.siteMetadata.title}</Link>
+      <div style={{ margin: `auto`, maxWidth: 1000, padding: `0 1rem` }}>
+        <Navbar expand="sm">
+          <Navbar.Brand style={{ padding: 0 }}>
+            <Link to="/">
+              {" "}
+              <StaticImage
+                width={55}
+                height={36}
+                src="../images/metarules.svg"
+                alt="brand logo"
+              />{" "}
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

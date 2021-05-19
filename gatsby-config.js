@@ -93,5 +93,19 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-plugin-firebase",
+      options: {
+        credentials: {
+          apiKey: "AIzaSyDT6NrKEsaylMS19mz8xfBtpqgd-7VbI4s",
+          authDomain: "metarules-gatsby.firebaseapp.com",
+          projectId: "metarules-gatsby",
+          storageBucket: "metarules-gatsby.appspot.com",
+          messagingSenderId: "273021802973",
+          appId: "1:273021802973:web:f271735c7113a15bdb3e34",
+          measurementId: "G-QFBLEPSWXW"
+        }
+      }
+    }
   ],
 }
