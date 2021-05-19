@@ -46,8 +46,10 @@ const Header = () => {
             <Link to="/">
               {" "}
               <StaticImage
-                width={55}
-                height={36}
+                placeholder="dominantColor"
+                quality=  "100"
+                width={50}
+                height={35}
                 src="../images/metarules.svg"
                 alt="brand logo"
               />{" "}
