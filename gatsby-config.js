@@ -106,6 +106,7 @@ module.exports = {
           measurementId: "G-QFBLEPSWXW"
         }
       }
-    }
+    },
+    `gatsby-plugin-styled-components`
   ],
 }

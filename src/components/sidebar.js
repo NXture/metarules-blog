@@ -47,19 +47,19 @@ const Sidebar = ({ author, authorFluid }) => {
             <iframe
               title="amazon ads1"
               style={{ width: "130px", height: "240px" }}
-              marginwidth="0"
-              marginheight="0"
+              marginWidth="0"
+              marginHeight="0"
               scrolling="no"
-              frameborder="0"
+              frameBorder="0"
               src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=metarulesgats-21&marketplace=amazon&amp;region=IN&placement=9352138325&asins=9352138325&linkId=1ec80329b84915d598224aaac5b05c7a&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff"
             ></iframe>
             <iframe
               title="amazon ads2"
               style={{ width: "130px", height: "240px" }}
-              marginwidth="0"
-              marginheight="0"
+              marginWidth="0"
+              marginHeight="0"
               scrolling="no"
-              frameborder="0"
+              frameBorder="0"
               src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=metarulesgats-21&marketplace=amazon&amp;region=IN&placement=9352134915&asins=9352134915&linkId=0b91ce2f98869423b09bfd42b1d4f0d2&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff"
             ></iframe>
           </div>
