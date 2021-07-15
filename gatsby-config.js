@@ -9,13 +9,6 @@ module.exports = {
     }
   },
   plugins: [
-    {
-      resolve: "gatsby-plugin-google-tagmanager",
-      options: {
-        id: "GTM-PN9ML22",
-        includeInDevelopment: false,
-      },
-    },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
